@@ -3,18 +3,18 @@
    ============================================================ */
 
 :root {
-  --bg: #0f1115;
-  --bg-soft: #161922;
-  --panel: #1b1f2a;
-  --panel-2: #20263324;
-  --border: #2a3040;
-  --text: #e6e9f0;
-  --text-dim: #9aa3b2;
-  --text-faint: #6b7384;
-  --accent: #4f8cff;
-  --accent-soft: #4f8cff22;
-  --accent-2: #38d39f;
-  --warn: #f0a45c;
+  --bg: #ffffff;
+  --bg-soft: #f4f6f9;
+  --panel: #ffffff;
+  --panel-2: #f7f9fc;
+  --border: #e3e7ee;
+  --text: #1a1d23;
+  --text-dim: #5a6472;
+  --text-faint: #8a93a3;
+  --accent: #2f6fed;
+  --accent-soft: #2f6fed14;
+  --accent-2: #0f9d6e;
+  --warn: #d9822b;
   --radius: 14px;
   --radius-sm: 8px;
   --maxw: 1080px;
@@ -44,7 +44,7 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(15, 17, 21, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -66,12 +66,13 @@ a:hover { text-decoration: underline; }
   font-size: 16px;
 }
 .brand .logo {
-  width: 26px; height: 26px;
-  border-radius: 7px;
+  width: 28px; height: 28px;
+  border-radius: 8px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   display: grid; place-items: center;
-  color: #fff; font-weight: 800; font-size: 13px;
+  overflow: hidden;
 }
+.brand .logo img { height: 18px; width: auto; display: block; }
 .brand:hover { text-decoration: none; }
 .nav {
   display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap;
@@ -151,7 +152,8 @@ h2 + p, h3 + p { margin-top: 4px; }
   text-decoration: none;
   border-color: var(--accent);
   transform: translateY(-2px);
-  background: #1e2330;
+  background: var(--panel-2);
+  box-shadow: 0 6px 20px rgba(20, 30, 50, 0.06);
 }
 .card .num {
   font-family: var(--mono);
@@ -188,7 +190,7 @@ thead th {
   letter-spacing: 0.02em;
 }
 tbody tr:last-child td { border-bottom: none; }
-tbody tr:hover { background: #1e2330; }
+tbody tr:hover { background: var(--panel-2); }
 td code, th code { white-space: nowrap; }
 
 /* ---------- code ---------- */
@@ -199,10 +201,10 @@ code {
   border: 1px solid var(--border);
   border-radius: 5px;
   padding: 1px 6px;
-  color: #d6def0;
+  color: #b03a6e;
 }
 pre {
-  background: #0b0d12;
+  background: #f6f8fa;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 18px 20px;
@@ -212,7 +214,7 @@ pre {
   line-height: 1.6;
   margin: 16px 0;
 }
-pre code { background: none; border: none; padding: 0; color: #cdd6f4; }
+pre code { background: none; border: none; padding: 0; color: #24292f; }
 
 /* ---------- badges / pills ---------- */
 .pill {
@@ -227,13 +229,13 @@ pre code { background: none; border: none; padding: 0; color: #cdd6f4; }
   white-space: nowrap;
 }
 .pill.in { color: var(--accent); border-color: var(--accent-soft); background: var(--accent-soft); }
-.pill.out { color: var(--accent-2); border-color: #38d39f22; background: #38d39f18; }
-.pill.off { color: #ff6b6b; border-color: #ff6b6b33; background: #ff6b6b18; }
-.pill.get { color: #38d39f; border-color: #38d39f33; }
-.pill.post { color: #4f8cff; border-color: #4f8cff33; }
-.pill.put { color: #f0a45c; border-color: #f0a45c33; }
-.pill.delete { color: #ff6b6b; border-color: #ff6b6b33; }
-.pill.ws { color: #b78cff; border-color: #b78cff33; }
+.pill.out { color: var(--accent-2); border-color: #0f9d6e44; background: #0f9d6e12; }
+.pill.off { color: #dc3a3a; border-color: #dc3a3a44; background: #dc3a3a12; }
+.pill.get { color: #0f9d6e; border-color: #0f9d6e44; background: #0f9d6e12; }
+.pill.post { color: #2f6fed; border-color: #2f6fed44; background: #2f6fed12; }
+.pill.put { color: #c9751f; border-color: #c9751f44; background: #c9751f12; }
+.pill.delete { color: #dc3a3a; border-color: #dc3a3a44; background: #dc3a3a12; }
+.pill.ws { color: #8b5cf6; border-color: #8b5cf644; background: #8b5cf612; }
 
 /* ---------- callout ---------- */
 .note {
@@ -246,7 +248,7 @@ pre code { background: none; border: none; padding: 0; color: #cdd6f4; }
   font-size: 14.5px;
   color: var(--text);
 }
-.note.warn { border-left-color: var(--warn); background: #f0a45c14; }
+.note.warn { border-left-color: var(--warn); background: #d9822b12; }
 .note strong { color: var(--text); }
 
 /* ---------- two columns ---------- */
